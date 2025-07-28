@@ -17,5 +17,4 @@ public class ControllerProvider {
     public Class<? extends ServicesProvider> DatosProvider(){
         return acceso.getClass();
     }
-
 }

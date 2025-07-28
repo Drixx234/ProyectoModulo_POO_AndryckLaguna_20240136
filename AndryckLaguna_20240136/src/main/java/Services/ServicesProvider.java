@@ -1,6 +1,7 @@
 package Services;
 
 import Models.DTO.DTOProvider;
+import Repositories.RepositoryProvider;
 import entities.EntitiesProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 public class ServicesProvider {
 
     @Autowired
-    private Repository repo;
+    private RepositoryProvider repo;
 
     public List<DTOProvider> getAllprovider(){
         List<EntitiesProvider> providers = repo.findAll();
@@ -21,4 +22,18 @@ public class ServicesProvider {
                 .map(this::convertirProviderDTO)
                 .collect(Collectors.toList());
     }
+
+    private DTOProvider convertirProviderDTO(EntitiesProvider provider){
+        DTOProvider dto = new DTOProvider();
+        dto.setProviderID(dto.getProviderID());
+        dto.setProviderName(dto.getProviderName());
+        dto.setProviderPhone(dto.getProviderPhone());
+        dto.setProviderAddress(dto.getProviderAddress());
+        dto.setProviderEmail(dto.getProviderEmail());
+        dto.setProviderCode(dto.getProviderCode());
+        dto.setProviderStatus(dto.getProviderStatus());
+        dto.setProviderComments(dto.getProviderComments());
+        return dto;
+    }
 }
+

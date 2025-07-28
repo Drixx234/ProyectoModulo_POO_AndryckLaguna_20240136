@@ -1,0 +1,6 @@
+Models\DTO\DTOProvider.class
+Repositories\RepositoryProvider.class
+entities\EntitiesProvider.class
+controller\ControllerProvider.class
+Services\ServicesProvider.class
+AndryckLaguna_20240136\AndryckLaguna_20240136\ProyectoModuloAndryckLaguna20240136Application.class
